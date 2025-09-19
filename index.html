@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="TemMed-Bench: Evaluating Temporal Medical Image Reasoning in Vision-Language Models">
+
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Multimodal Benchmark, Multimodal Learning, Vision and Language Dataset, Vision Language Model, LLM, VLM">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>MRAG-Bench</title>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-MFCT45H');</script>
+  <!-- End Google Tag Manager -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="icon" href="static/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  </head>
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFCT45H" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://mragbench.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <!-- <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://gordonhu608.github.io/mqtllava/">
+            MQT-LLaVA
+          </a>
+          <a class="navbar-item" href="https://gordonhu608.github.io/bliva/">
+            BLIVA
+          </a>
+          <a class="navbar-item" href="https://gordonhu608.github.io/VALOR-Eval/">
+            VALOR-Eval
+          </a>
+        </div> -->
+      </div>
+    </div>
+
+  </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">TemMed-Bench: Evaluating Temporal Medical Image Reasoning in Vision-Language Models</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+                <!-- <span class="author-block">
+                  <a href="https://gordonhu608.github.io/" target="_blank"><font color="#9fc5e8"><b>Wenbo Hu</b></font></a><sup>1</sup>&emsp;
+                </span> -->
+                <span class="author-block">
+                  <a href="" target="_blank">Junyi Zhang</a><sup>1</sup>,&emsp;
+                </span>
+                <span class="author-block">
+                  <a href="" target="_blank">Jia-Chen Gu</a><sup>1</sup>,&emsp;
+                </span>
+                <span class="author-block">
+                  <a href="" target="_blank">Wenbo Hu</a><sup>1</sup>,&emsp;
+                </span>
+                <span class="author-block">
+                  <a href="" target="_blank">Yu Zhou</a><sup>1</sup>,&emsp;
+                </span>
+                
+                <br>
+                <span class="author-block">
+                  <a href="" target="_blank">Robinson Piramuthu</a><sup>2</sup>,&emsp;
+                </span>
+                <span class="author-block">
+                  <a href="" target="_blank">Nanyun Peng</a><sup>1</sup>&emsp;
+                </span>
+                </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                      <sup>1</sup>UCLA&emsp;
+                      <sup>2</sup>Amazon&emsp;
+                    </span>
+                    <!-- <span class="author-block"><br>ICLR 2025</span> -->
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                      <!-- ICLR 2025 -->
+                    </span>
+                    
+                  </div>
+<!-- 
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                      <sup>*</sup>Equal Leadership&emsp;
+                      <sup>†</sup>Equal Contribution
+                    </span>
+                  </div> -->
+
+                  <div class="content has-text-centered">
+                    <div class="publication-links">
+                      <span class="link-block">
+                        <a href="" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <span class="link-block">
+                      <a href="https://huggingface.co/datasets/uclanlp/TemMed-Bench" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fa fa-database"></i>
+                      </span>
+                      <span>HF Dataset</span>
+                    </a>
+                  </span>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://github.com/Levi-ZJY/TemMed-Bench" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                  </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3 has-text-centered">TemMed-Bench</h2>
+      <h2 class="subtitle has-text-justified">
+        <!-- <span style="font-weight:bold;">MRAG-Bench  </span>
+        consists of 16,130 images and 1,353 human-annotated multiple-choice questions across 9 distinct scenarios, providing a robust and systematic evaluation of Large Vision Language Model (LVLM)'s vision-centric multimodal retrieval-augmented generation (RAG) abilities.  -->
+        <br>
+      </h2>
+      <img src="static/images/Teaser_Figure.png" height="100%"/>
+      <!-- <h2 class="subtitle has-text-centered">Example tasks in <span style="font-weight:bold;">BLINK</span>.</h2> -->
+      <h2 class="hero-body has-text-centered">
+        <!-- <br> -->
+        <!-- Example scenarios from <span style="font-weight:bold;">MRAG-Bench</span>. Previous benchmarks mainly focused on retrieving from textual knowledge. 
+        However, there are scenarios where retrieving correct textual knowledge is hard and not as useful as visual knowledge. -->
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">TemMed-Bench -- Composition</h2>
+        <h2 class="content has-text-justified">
+        </h2>
+        <img src="static/images/Benchmark_Comparison.png" height="100%"/> 
+        <br>
+        <h2 class="content has-text-justified">
+        </h2>
+        <img src="static/images/Task_Figure.png" height="100%"/> 
+        <br>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{hu2024mragbench,
+          title={MRAG-Bench: Vision-Centric Evaluation for Retrieval-Augmented Multimodal Models},
+          author={Hu, Wenbo and Gu, Jia-Chen and Dou, Zi-Yi and Fayyaz, Mohsen and Lu, Pan and Chang, Kai-Wei and Peng, Nanyun},
+          journal={arXiv preprint arXiv:2410.08182},
+          year={2024}
+        }
+      </code></pre>
+    </div>
+</section>
+End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
