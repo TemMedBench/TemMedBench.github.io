@@ -58,7 +58,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://mragbench.github.io/">
+      <a class="navbar-item" href="https://temmedbench.github.io/">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -97,24 +97,30 @@
                   <a href="https://gordonhu608.github.io/" target="_blank"><font color="#9fc5e8"><b>Wenbo Hu</b></font></a><sup>1</sup>&emsp;
                 </span> -->
                 <span class="author-block">
-                  <a href="" target="_blank">Junyi Zhang</a><sup>1</sup>,&emsp;
+                  <!-- <a href="" target="_blank">Junyi Zhang</a><sup>1</sup>,&emsp; -->
+                  <a href="">Junyi Zhang</a><sup>1</sup>,&emsp;
                 </span>
                 <span class="author-block">
-                  <a href="" target="_blank">Jia-Chen Gu</a><sup>1</sup>,&emsp;
+                  <!-- <a href="" target="_blank">Jia-Chen Gu</a><sup>1</sup>,&emsp; -->
+                  <a href="">Jia-Chen Gu</a><sup>1</sup>,&emsp;
                 </span>
                 <span class="author-block">
-                  <a href="" target="_blank">Wenbo Hu</a><sup>1</sup>,&emsp;
+                  <!-- <a href="" target="_blank">Wenbo Hu</a><sup>1</sup>,&emsp; -->
+                  <a href="">Wenbo Hu</a><sup>1</sup>,&emsp;
                 </span>
                 <span class="author-block">
-                  <a href="" target="_blank">Yu Zhou</a><sup>1</sup>,&emsp;
+                  <!-- <a href="" target="_blank">Yu Zhou</a><sup>1</sup>,&emsp; -->
+                   <a href="">Yu Zhou</a><sup>1</sup>,&emsp;
                 </span>
                 
                 <br>
                 <span class="author-block">
-                  <a href="" target="_blank">Robinson Piramuthu</a><sup>2</sup>,&emsp;
+                  <!-- <a href="" target="_blank">Robinson Piramuthu</a><sup>2</sup>,&emsp; -->
+                  <a href="">Robinson Piramuthu</a><sup>2</sup>,&emsp;
                 </span>
                 <span class="author-block">
-                  <a href="" target="_blank">Nanyun Peng</a><sup>1</sup>&emsp;
+                  <!-- <a href="" target="_blank">Nanyun Peng</a><sup>1</sup>&emsp; -->
+                  <a href="">Nanyun Peng</a><sup>1</sup>&emsp;
                 </span>
                 </div>
 
@@ -186,13 +192,28 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-3 has-text-centered">TemMed-Bench</h2>
-      <h2 class="subtitle has-text-justified">
-        <!-- <span style="font-weight:bold;">MRAG-Bench  </span>
-        consists of 16,130 images and 1,353 human-annotated multiple-choice questions across 9 distinct scenarios, providing a robust and systematic evaluation of Large Vision Language Model (LVLM)'s vision-centric multimodal retrieval-augmented generation (RAG) abilities.  -->
-        <br>
-      </h2>
+
       <img src="static/images/Teaser_Figure.png" height="100%"/>
-      <!-- <h2 class="subtitle has-text-centered">Example tasks in <span style="font-weight:bold;">BLINK</span>.</h2> -->
+      
+      <br>
+      <br>
+
+      <p><strong>TemMed-Bench</strong> features three primary highlights.</p>
+      <ul style="list-style: disc; margin-left: 1.5em;">
+        <li>
+          <strong>Temporal reasoning focus</strong>: each sample in TemMed-Bench includes historical condition information,
+          challenging models to analyze changes in patient conditions over time.
+        </li>
+        <li>
+          <strong>Multi-image input</strong>: each sample in TemMed-Bench contains multiple images from different visits as input,
+          emphasizing the need for models to process and reason over multiple images.
+        </li>
+        <li>
+          <strong>Diverse task suite</strong>: TemMed-Bench comprises three tasks including VQA, report generation, and image-pair selection.
+          These tasks are all built upon a test set consisting of 1,000 samples. Additionally, TemMed-Bench includes a knowledge corpus with over 17,000 instances.
+        </li>
+      </ul>
+      
       <h2 class="hero-body has-text-centered">
         <!-- <br> -->
         <!-- Example scenarios from <span style="font-weight:bold;">MRAG-Bench</span>. Previous benchmarks mainly focused on retrieving from textual knowledge. 
@@ -209,14 +230,49 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-sixths">
         <h2 class="title is-3">TemMed-Bench -- Composition</h2>
-        <h2 class="content has-text-justified">
-        </h2>
-        <img src="static/images/Benchmark_Comparison.png" height="100%"/> 
         <br>
-        <h2 class="content has-text-justified">
-        </h2>
         <img src="static/images/Task_Figure.png" height="100%"/> 
+
         <br>
+        <br>
+
+        <ul style="list-style: disc; margin-left: 1.5em; font-size: 18px;">
+          <li style="text-align: left;">
+            Examples of the three tasks in TemMed-Bench. Each question in these tasks is designed to challenge LVLMs' ability to analyze condition changes, providing a comprehensive evaluation of their temporal medical image reasoning ability.
+          </li>
+        </ul>
+
+        <br>
+        <br>
+        
+        <img src="static/images/Benchmark_Comparison.png" height="100%"/> 
+
+        <br>
+        <br>
+
+        <ul style="list-style: disc; margin-left: 1.5em; font-size: 18px;">
+          <li style="text-align: left;">
+            Comparison with previous works. TemMed-Bench focuses on evaluating LVLMs in temporal reasoning over multiple medical images.
+          </li>
+        </ul>
+        
+
+        <br>
+        <br>
+
+
+        <img src="static/images/Data_Amount.png" style="width:45%;"/> 
+        <img src="static/images/Keywords_Distribution.png" style="width:48.5%;"/> 
+
+        <br>
+        <br>
+
+        <ul style="list-style: disc; margin-left: 1.5em; font-size: 18px;">
+          <li style="text-align: left;">
+            Key statistics and keywords distribution of TemMed-Bench
+          </li>
+        </ul>
+
         
       </div>
     </div>
@@ -226,7 +282,65 @@
 
 
 
+<!-- Paper abstract -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Existing medical reasoning benchmarks for vision-language models primarily focus on analyzing a patient's condition based on an image from a single visit. However, this setting deviates significantly from real-world clinical practice, where doctors typically refer to a patient's historical conditions to provide a comprehensive assessment by tracking their changes over time. In this paper, we introduce <strong>TemMed-Bench</strong>, the first benchmark designed for analyzing changes in patients' conditions between different clinical visits, which evaluates the ability of large vision-language models (LVLMs) to reason over <strong>tem</strong>poral <strong>med</strong>ical images. <strong>TemMed-Bench</strong> consists of a test set comprising three tasks – visual question-answering (VQA), report generation, and image-pair selection - and a supplementary knowledge corpus of over 17,000 instances. With <strong>TemMed-Bench</strong>, we conduct an evaluation of twelve LVLMs, comprising six proprietary and six open-source models. Our results show that most LVLMs lack the ability to analyze patients’ condition changes over temporal medical images, and a large proportion perform only at a random-guessing level in the zero-shot setting. In contrast, GPT o3, o4-mini and Claude 3.5 Sonnet demonstrate comparatively decent performance, although they still fall short of the ideal level. To enhance the tracking of condition changes, we explore augmenting the input with both retrieved visual and textual modalities in the medical domain. Experimental results indicate that multi-modal retrieval augmentation yields notably higher performance gains than textual retrieval alone across most models on our benchmark, with the VQA task showing an average improvement of 2.59%. Overall, our work benchmarks LVLMs in real-world clinical practice, reveals their limitations in temporal medical image reasoning, and highlights the use of multi-modal retrieval augmentation as a potentially promising direction worth exploring to address this challenge.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+
+
+<!-- Paper Results -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Evaluation Results</h2>
+
+        <img src="static/images/Results_zeroshot.png" width="100%"/>
+        
+        <br>
+        <br>
+
+        <ul style="list-style: disc; margin-left: 1.5em; font-size: 18px;">
+          <li style="text-align: left;">
+            Evaluation results on TemMed-Bench in the zero-shot setting. TemMed-Bench clearly reveals the limitations of current LVLMs in temporal medical image reasoning. Most LVLMs perform at around the random guess level in the VQA and image-pair selection tasks, and achieve relatively low average scores in the report generation task.
+          </li>
+        </ul>
+        
+        <br>
+        <br>
+
+        <img src="static/images/Results_RAG.png" width="100%"/>
+        
+        <br>
+        <br>
+
+        <ul style="list-style: disc; margin-left: 1.5em; font-size: 18px;">
+          <li style="text-align: left;">
+            Evaluation results on TemMed-Bench with text-only and multi-modal retrieval augmentation (all using top-1 retrieval). 
+            The evaluation results demonstrate that multi-modal retrieval augmentation generally yields greater performance improvements across most models compared to text-only retrieval augmentation.
+            Notably, compared to their text-only counterparts, HealthGPT, Claude 3.5 Sonnet, and GPT-4o demonstrate substantial gains in the multi-modal setting, with increases in VQA accuracy of 10.85%, 7.90%, and 4.75%, and improvements in report generation average score of 0.73, 0.68, and 1.59, respectively.
+          </li>
+        </ul>
+
+        <br>
+        <br>
+        
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!--BibTex citation -->
