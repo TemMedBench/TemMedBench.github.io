@@ -114,17 +114,17 @@
                       <sup>1</sup>UCLA&emsp;
                       <sup>2</sup>Amazon&emsp;
                     </span>
-                    <!-- <span class="author-block"><br>ICLR 2025</span> -->
+                    <!-- <span class="author-block"><br>ICLR</span> -->
                     <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span> -->
                   </div>
 
                   <div class="is-size-5 publication-authors">
                     <span class="author-block">
-                      <!-- ICLR 2025 -->
+                      <!-- ICLR -->
                     </span>
                     
                   </div>
-<!-- 
+                  <!-- 
                   <div class="is-size-5 publication-authors">
                     <span class="author-block">
                       <sup>*</sup>Equal Leadership&emsp;
@@ -186,16 +186,13 @@
       <p><strong>TemMed-Bench</strong> features three primary highlights.</p>
       <ul style="list-style: disc; margin-left: 1.5em;">
         <li>
-          <strong>Temporal reasoning focus</strong>: each sample in TemMed-Bench includes historical condition information,
-          challenging models to analyze changes in patient conditions over time.
+          <strong>Temporal reasoning focus:</strong> Each sample in TemMed-Bench includes historical condition information, which challenges models to analyze changes in patient conditions over time.
         </li>
         <li>
-          <strong>Multi-image input</strong>: each sample in TemMed-Bench contains multiple images from different visits as input,
-          emphasizing the need for models to process and reason over multiple images.
+          <strong>Multi-image input:</strong> Each sample in TemMed-Bench contains multiple images from different visits as input, emphasizing the need for models to process and reason over multiple images.
         </li>
         <li>
-          <strong>Diverse task suite</strong>: TemMed-Bench comprises three tasks including VQA, report generation, and image-pair selection.
-          These tasks are all built upon a test set consisting of 1,000 samples. Additionally, TemMed-Bench includes a knowledge corpus with over 17,000 instances.
+          <strong>Diverse task suite:</strong> TemMed-Bench comprises three tasks, including VQA, report generation, and image-pair selection. Additionally, TemMed-Bench includes a knowledge corpus with more than 17,000 instances to support retrieval-augmented generation (RAG),
         </li>
       </ul>
       
@@ -300,7 +297,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Existing medical reasoning benchmarks for vision-language models primarily focus on analyzing a patient's condition based on an image from a single visit. However, this setting deviates significantly from real-world clinical practice, where doctors typically refer to a patient's historical conditions to provide a comprehensive assessment by tracking their changes over time. In this paper, we introduce <strong>TemMed-Bench</strong>, the first benchmark designed for analyzing changes in patients' conditions between different clinical visits, which evaluates the ability of large vision-language models (LVLMs) to reason over <strong>tem</strong>poral <strong>med</strong>ical images. <strong>TemMed-Bench</strong> consists of a test set comprising three tasks – visual question-answering (VQA), report generation, and image-pair selection - and a supplementary knowledge corpus of over 17,000 instances. With <strong>TemMed-Bench</strong>, we conduct an evaluation of twelve LVLMs, comprising six proprietary and six open-source models. Our results show that most LVLMs lack the ability to analyze patients’ condition changes over temporal medical images, and a large proportion perform only at a random-guessing level in the zero-shot setting. In contrast, GPT o3, o4-mini and Claude 3.5 Sonnet demonstrate comparatively decent performance, although they still fall short of the ideal level. To enhance the tracking of condition changes, we explore augmenting the input with both retrieved visual and textual modalities in the medical domain. Experimental results indicate that multi-modal retrieval augmentation yields notably higher performance gains than textual retrieval alone across most models on our benchmark, with the VQA task showing an average improvement of 2.59%. Overall, our work benchmarks LVLMs in real-world clinical practice, reveals their limitations in temporal medical image reasoning, and highlights the use of multi-modal retrieval augmentation as a potentially promising direction worth exploring to address this challenge.
+            Existing medical reasoning benchmarks for vision-language models primarily focus on analyzing a patient's condition based on an image from a single visit. However, this setting deviates significantly from real-world clinical practice, where doctors typically refer to a patient's historical conditions to provide a comprehensive assessment by tracking their changes over time. In this paper, we introduce <strong>TemMed-Bench</strong>, the first benchmark designed for analyzing changes in patients' conditions between different clinical visits, which challenges large vision-language models (LVLMs) to reason over <strong>tem</strong>poral <strong>med</strong>ical images. <strong>TemMed-Bench</strong> consists of a test set comprising three tasks - visual question-answering (VQA), report generation, and image-pair selection - and a supplementary knowledge corpus of over 17,000 instances. With <strong>TemMed-Bench</strong>, we conduct an evaluation of twelve LVLMs, comprising six proprietary and six open-source models. Our results show that most LVLMs lack the ability to analyze patients' condition changes over temporal medical images, and a large proportion perform only at a random-guessing level in the closed-book setting. In contrast, GPT o3, o4-mini and Claude 3.5 Sonnet demonstrate comparatively decent performance, though they have yet to reach the desired level. To enhance the tracking of condition changes, we explore augmenting the input with both retrieved visual and textual modalities in the medical domain. We also show that multi-modal retrieval augmentation yields notably higher performance gains than no retrieval and textual retrieval alone across most models on our benchmark, with the VQA task showing an average improvement of 2.59%. Overall, we compose a benchmark grounded on real-world clinical practice, and it reveals LVLMs' limitations in temporal medical image reasoning, as well as highlighting the use of multi-modal retrieval augmentation as a potentially promising direction worth exploring to address this challenge.
           </p>
         </div>
       </div>
@@ -324,7 +321,7 @@
 
         <ul style="list-style: disc; margin-left: 1.5em; font-size: 18px;">
           <li style="text-align: left;">
-            Evaluation results on TemMed-Bench in the zero-shot setting. TemMed-Bench clearly reveals the limitations of current LVLMs in temporal medical image reasoning. Most LVLMs perform at around the random guess level in the VQA and image-pair selection tasks, and achieve relatively low average scores in the report generation task.
+            Evaluation results on TemMed-Bench in the closed-book setting. TemMed-Bench clearly reveals the limitations of current LVLMs in temporal medical image reasoning. Most LVLMs perform at around the random guess level in the VQA and image-pair selection tasks, and achieve relatively low average scores in the report generation task.
           </li>
         </ul>
         
@@ -338,7 +335,7 @@
 
         <ul style="list-style: disc; margin-left: 1.5em; font-size: 18px;">
           <li style="text-align: left;">
-            Evaluation results on TemMed-Bench with text-only and multi-modal retrieval augmentation (all using top-1 retrieval). 
+            Evaluation results on TemMed-Bench with text-only and multi-modal retrieval augmentation (using top-1 retrieval). 
             The evaluation results demonstrate that multi-modal retrieval augmentation generally yields greater performance improvements across most models compared to text-only retrieval augmentation.
             Notably, compared to their text-only counterparts, HealthGPT, Claude 3.5 Sonnet, and GPT-4o demonstrate substantial gains in the multi-modal setting, with increases in VQA accuracy of 10.85%, 7.90%, and 4.75%, and improvements in report generation average score of 0.73, 0.68, and 1.59, respectively.
           </li>
@@ -353,8 +350,55 @@
 </section>
 
 
+
+
+<!-- Paper Analysis -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Analysis and Discussion</h2> <br>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-5">
+        Ablation Study on Retrieval Methods
+        <h2 class="content has-text-justified">
+          Results indicate that pairwise image retrieval achieved the highest performance, primarily due to two factors. 
+          First, for image-to-text retrieval, the report feature in TemMed-Bench does not correspond to a single image, as the report describes condition changes between two images. Consequently, directly calculating the feature similarity between the report and a single image introduces bias.
+          Second, image-to-image retrieval relies solely on the similarity of current-visit images, ensuring similarity in current conditions between the target and retrieved instances, but does not guarantee similarity in condition changes.
+          Therefore, in TemMed-Bench, only by considering both historical and current images during retrieval and ensuring similarity in both, can retrieved instances reflect similar condition changes.
+        </h2>
+        <div class="columns is-centered has-text-centered">
+        <img src="static/images/Retrieval_Method.png" width="95%"/> </div>
+        <br>
+
+        <h2 class="title is-5">Impact of Top-k Retrieval Augmentation</h2>
+        <h2 class="content has-text-justified">
+           To further analyze the impact of varying top-k retrievals on augmentation performance, we conducted experiments to evaluate the performance of LVLMs under top-1 to top-5 retrieval augmentation settings.
+           Notably, multi-modal retrieval augmentation consistently outperforms text-only retrieval augmentation across top-1 to top-5 settings, further confirming the effectiveness of incorporating multi-modal retrieved information in enhancing LVLM performance in the medical domain.
+           <br>
+           <br>
+           Furthermore, by comparing the performance improvement from top-1 to top-5, we observe that GPT-4o demonstrates a significantly higher increase in accuracy (6.6%) compared to HealthGPT (2.37%). These results
+           suggest that LVLMs with superior multi-image processing capabilities derive greater benefits from an increased number of retrieved instances, underscoring the importance of enhancing multi-image processing ability to fully leverage multi-modal retrieved information.
+        </h2>
+        <div class="columns is-centered has-text-centered">
+        <img src="static/images/TopK.png" width="95%"/> </div>
+        <br>
+
+    
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 <!--BibTex citation -->
-  <section class="section hero is-light" id="BibTeX">
+  <section class="section hero" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@misc{zhang2025temmedbenchevaluatingtemporalmedical,
